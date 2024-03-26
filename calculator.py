@@ -1,5 +1,5 @@
 #------------------------------------------------------
-#   File: Step6_solved.py  
+#   File: Calculator made in the Mobile Application Development class. (Spring 2024)
 #------------------------------------------------------
 import toga
 from toga.style.pack import (LEFT, RIGHT, COLUMN, ROW, 
