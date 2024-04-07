@@ -1,0 +1,26 @@
+
+AudioPlayer GUI Layout Description
+
+- Main Window Title: "AudioPlayer"
+
+1. instruction_label (Label Widget)
+   - Style: nameStyle
+   - Text: "Listen to the sound and guess the instrument:"
+   - Positioned at the top, centered.
+
+2. instrument_selector (Selection Widget)
+   - Style: commandStyle
+   - Options: "Guitar", "Violin", "Piano", "Cello", "Trumpet", "Drums"
+   - Positioned below the instruction label, allows the user to select an instrument guess.
+
+3. submit_button (Button Widget)
+   - Style: commandStyle
+   - Label: "Submit Guess"
+   - Positioned below the instrument selector, this button is used to submit the selected guess.
+
+4. result_label (Label Widget)
+   - Style: nameStyle
+   - Text: Dynamic based on the game's state - initially empty.
+   - Positioned at the bottom, used to display the results or status messages to the user.
+
+Each widget is contained within a main box styled with 'displayStyle', which fills the main window. The layout is arranged in a column, with each widget stacked vertically.

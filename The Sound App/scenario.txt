@@ -1,0 +1,33 @@
+Scenario Use Case: Guess the Instrument Game
+
+1. The user opens the 'Guess the Instrument' app.
+2. The main window of the app displays the title 'AudioPlayer'.
+3. The user is presented with an instruction label that reads "Listen to the sound and guess the instrument:".
+4. Automatically, the first sound starts playing. It's sourced from the 'assets' folder, corresponding to the first instrument in the list, for example, 'guitar.mp3'.
+
+5. While the sound is playing, the user looks at the dropdown selection box, which lists the instrument options: Guitar, Violin, Piano, Cello, Trumpet, and Drums.
+6. The user selects an instrument from the dropdown that they believe matches the sound being played.
+7. The user then clicks on the 'Submit Guess' button to submit their guess.
+
+8. Upon clicking 'Submit Guess':
+   a. The sound stops playing immediately to prevent overlapping if another sound is triggered.
+   b. A 10-second timer that was started with the sound is canceled to avoid auto progression.
+   c. The app checks if the user's guess matches the correct instrument for the played sound.
+   d. The result of the guess is then displayed in a label below the button. 
+      - If correct, it reads "Correct! It was a Guitar." (assuming guitar was the correct answer)
+      - If incorrect, it reads "Incorrect! It was a Guitar." (with the correct instrument name)
+   
+9. The app then automatically moves to the next sound in the list and starts playing it.
+   - Another 10-second timer starts for the user to make their guess.
+
+10. Steps 5-9 repeat until all sounds have been played.
+
+11. After the last sound:
+    a. The 'Submit Guess' button no longer starts new sounds.
+    b. The final results are displayed to the user, showing the number of correct guesses out of the total, e.g., "Game Over! You guessed 2 out of 3 correctly."
+    c. The user can close the app by clicking the window's close button or via the File menu.
+
+Throughout the interaction, the Toga widgets handle events as follows:
+- The Selection widget captures the user's choice and holds it until the 'Submit Guess' button is pressed.
+- The Button widget triggers event handlers when clicked to submit guesses, play sounds, and manage the game's state.
+- Labels are used to give real-time feedback to the user, displaying instructions, results, and the final message.
